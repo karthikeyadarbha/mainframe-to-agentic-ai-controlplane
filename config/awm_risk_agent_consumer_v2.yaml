@@ -1,0 +1,25 @@
+# URN: urn:jpmc:awm:risk_agent_consumer:v2.1.0
+domain: awm
+sub_domain: risk_and_compliance
+consumer_identity: automated_aml_agent
+version: 2.1.0
+
+storage_spec:
+  format: delta
+  target_layer: gold
+
+required_schema:
+  - name: transaction_hash_id
+    type: string
+  - name: masked_customer_id
+    type: string
+  - name: account_balance
+    type: double
+  - name: risk_category
+    type: string
+    allowed_values: ['LOW', 'MEDIUM', 'HIGH']
+
+data_security:
+  classification: RESTRICTED_FINANCIAL
+  masking_policy:
+    apply_sha256: ['masked_customer_id', 'transaction_hash_id']

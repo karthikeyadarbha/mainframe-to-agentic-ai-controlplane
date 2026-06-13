@@ -1,0 +1,29 @@
+# URN: urn:jpmc:ccb:retail_transaction_producer:v1.0.2
+domain: ccb
+sub_domain: retail_banking
+data_product_source: legacy_transaction_stream
+version: 1.0.2
+sla_frequency: daily_batch
+
+storage_spec:
+  format: delta
+  target_layer: bronze
+
+schema:
+  - name: tx_id
+    type: string
+    length: 12
+    constraints:
+      - is_not_null: true
+  - name: cust_id
+    type: string
+    length: 10
+    constraints:
+      - is_not_null: true
+  - name: raw_balance
+    type: string
+    length: 10
+    description: "Mainframe packed decimal string (COMP-3 emulator multiplied by 100)"
+  - name: tx_status
+    type: string
+    length: 8

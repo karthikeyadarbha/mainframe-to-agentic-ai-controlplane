@@ -1,0 +1,2 @@
+{"tx_id":"TXN202600004","cust_id":"CUST112233","raw_balance":"-005000000","tx_status":"ACTIVE","account_balance":-50000.0,"transaction_hash_id":"TXN202600004","masked_customer_id":"CUST112233","risk_category":"LOW","rejection_reason":"CONSUMER_VIOLATION: Negative Account Balance"}
+{"tx_id":"TXN202600005","cust_id":"CUST778899","raw_balance":"0001500000","tx_status":"SUSPEND","account_balance":15000.0,"transaction_hash_id":"TXN202600005","masked_customer_id":"CUST778899","risk_category":"OUT_OF_BOUNDS","rejection_reason":"CONSUMER_VIOLATION: Risk Bound Level Out of Scope"}
