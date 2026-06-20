@@ -1,0 +1,19 @@
+product_name: SovereignRisk-AI
+version: v2.0
+data_owner: Risk_Engineering_Team
+sla_refresh_rate: 15_minutes
+
+schema:
+  transaction_id: string (uuid)
+  risk_score: float (0.0 - 1.0)
+  adjudication_label: string (enum: ['APPROVE', 'REVIEW', 'BLOCK'])
+  confidence_score: float (0.0 - 1.0)
+  governance_metadata:
+    model_version: string
+    graph_context_id: string
+    source_snapshot_ts: timestamp
+    compliance_tag: string (e.g., 'AML_2026')
+
+usage_policy:
+  access_level: restricted
+  retention_period: 7_years
